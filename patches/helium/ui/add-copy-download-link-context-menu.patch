@@ -5,7 +5,7 @@
                                 // an editing hint.
      OPEN_HELIUM_SERVICES = 23,  // Open the Services page in settings.
 +    COPY_DOWNLOAD_LINK = 24,  // Copy the download source URL to the clipboard.
-
+ 
 -    kMaxValue = OPEN_HELIUM_SERVICES,  // Keep last.
 +    kMaxValue = COPY_DOWNLOAD_LINK,  // Keep last.
    };
@@ -126,7 +126,7 @@
 @@ -240,4 +243,7 @@
    in_progress_download_menu_model_->AddItem(
        DownloadCommands::PAUSE, GetLabelForCommandId(DownloadCommands::PAUSE));
-
+ 
 +  in_progress_download_menu_model_->AddItem(
 +      DownloadCommands::COPY_DOWNLOAD_LINK,
 +      GetLabelForCommandId(DownloadCommands::COPY_DOWNLOAD_LINK));
@@ -134,7 +134,7 @@
 @@ -273,4 +279,7 @@
    in_progress_download_paused_menu_model_->AddItem(
        DownloadCommands::RESUME, GetLabelForCommandId(DownloadCommands::RESUME));
-
+ 
 +  in_progress_download_paused_menu_model_->AddItem(
 +      DownloadCommands::COPY_DOWNLOAD_LINK,
 +      GetLabelForCommandId(DownloadCommands::COPY_DOWNLOAD_LINK));
