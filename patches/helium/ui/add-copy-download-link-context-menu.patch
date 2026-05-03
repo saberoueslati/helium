@@ -18,20 +18,20 @@
  #include "ui/base/l10n/l10n_util.h"
  #include "ui/base/l10n/time_format.h"
  #include "ui/base/text/bytes_formatting.h"
-@@ -640,4 +641,5 @@
+@@ -639,4 +641,5 @@
      case DownloadCommands::RETRY:
      case DownloadCommands::CANCEL_DEEP_SCAN:
      case DownloadCommands::OPEN_HELIUM_SERVICES:
 +    case DownloadCommands::COPY_DOWNLOAD_LINK:
        return true;
-@@ -683,4 +685,5 @@
+@@ -682,4 +685,5 @@
      case DownloadCommands::OPEN_WITH_MEDIA_APP:
      case DownloadCommands::EDIT_WITH_MEDIA_APP:
      case DownloadCommands::OPEN_HELIUM_SERVICES:
 +    case DownloadCommands::COPY_DOWNLOAD_LINK:
        return false;
-@@ -741,4 +744,9 @@
-           ui::PAGE_TRANSITION_LINK, false),
+@@ -730,4 +744,9 @@
+                                  ui::PAGE_TRANSITION_LINK, false),
            /*navigation_handle_callback=*/{});
        break;
 +    case DownloadCommands::COPY_DOWNLOAD_LINK: {
@@ -54,7 +54,7 @@
      case DownloadCommands::OPEN_HELIUM_SERVICES:
 +    case DownloadCommands::COPY_DOWNLOAD_LINK:
        return false;
-@@ -865,5 +866,6 @@
+@@ -865,5 +867,6 @@
      case DownloadCommands::OPEN_WITH_MEDIA_APP:
      case DownloadCommands::EDIT_WITH_MEDIA_APP:
      case DownloadCommands::OPEN_HELIUM_SERVICES:
@@ -75,7 +75,7 @@
      case DownloadCommands::OPEN_HELIUM_SERVICES:
 +    case DownloadCommands::COPY_DOWNLOAD_LINK:
        return false;
-@@ -404,5 +405,6 @@
+@@ -404,5 +406,6 @@
      case DownloadCommands::OPEN_WITH_MEDIA_APP:
      case DownloadCommands::EDIT_WITH_MEDIA_APP:
      case DownloadCommands::OPEN_HELIUM_SERVICES:
@@ -156,7 +156,7 @@
  #if BUILDFLAG(IS_WIN)
 --- a/chrome/app/generated_resources.grd
 +++ b/chrome/app/generated_resources.grd
-@@ -2745,6 +2745,10 @@
+@@ -2767,6 +2767,10 @@
                     desc="Download context menu: Resume download">
              &amp;Resume
            </message>
