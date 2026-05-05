@@ -402,12 +402,6 @@
     "message": "Extension downloads are disabled"
   },
   {
-    "name": "IDS_DOWNLOAD_MENU_COPY_LINK",
-    "source": "chrome/app/generated_resources.grd",
-    "context": "Download context menu: Copy the download source URL to the clipboard",
-    "message": "Copy link"
-  },
-  {
     "name": "IDS_NTP_CUSTOMIZE_CHROME_CHANGE_WALLPAPER_LABEL",
     "source": "chrome/app/generated_resources.grd",
     "context": "The label for the action button for changing Helium wallpaper in the New Tab Page customize chrome side panel.",
